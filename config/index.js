@@ -10,4 +10,6 @@ if (process.env.NODE_ENV !== 'prod') {
 
 module.exports = {
     PORT: process.env.PORT,
+    JWT_SECRET: process.env.JWT_SECRET,
+    JWT_TTL: process.env.JWT_TTL
 }
