@@ -6,7 +6,7 @@
  */
 module.exports = {
 
-  development: {
+  dev: {
     client: 'pg',
     connection: 'postgres://postgres:@Skunky85@localhost/book_order',
     migrations: {

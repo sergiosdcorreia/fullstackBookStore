@@ -7,7 +7,7 @@ const {
     NOT_FOUND,
     UNAUTHORIZED,
     UNPROCESSABLE
-} = require('../helpers/error_helper');
+} = require('../helpers/error.helper');
 
 const unauthorized = (err, req, res, next) => {
     if (err.status !== UNAUTHORIZED) return next(err);

@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const fs = require('fs');
 const path = require('path');
-const knex = require('../../database/knexfile');
+const knex = require('../../database/connection');
 const debug = require('debug')('order:modelIndex');
 
 const getModelFiles = (dir) => fs.readdirSync(dir)

@@ -1,4 +1,4 @@
-const createModelHelper = require('../helpers/model_helper');
+const createModelHelper = require('../helpers/model.helper');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { JWT_SECRET, JWT_TTL } = require('../../config');
@@ -43,7 +43,7 @@ module.exports = (knex) => {
             .where({email});
 
         if (user.length > 0) {
-            const isMatch = await verifyPassword([password, user[0].password]);
+            const isMatch = await verifyPassword(password, user[0].password);
             if (isMatch) {
                 delete user[0].password;
                 const token = jwt.sign(user[0], JWT_SECRET, {
